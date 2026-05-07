@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaidevstudio - Open Source Community</title>
-    <meta name="description" content="Jaidevstudio is an open-source community building tools for everyone. Join our organization of developers, contribute to projects like MotherTongue and DevToolkit.">
+    <meta name="description"
+        content="Jaidevstudio is an open-source community building tools for everyone. Join our organization of developers, contribute to projects like MotherTongue and DevToolkit.">
     <link rel="icon" href="assets/images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --bg: #f0f4f8;
             --surface: #ffffff;
@@ -26,7 +33,7 @@
             --amber: #d97706;
             --green: #059669;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
@@ -34,19 +41,19 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* ── Navigation ── */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255,255,255,0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
             padding: 0 2rem;
         }
-        
+
         .nav-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -55,7 +62,7 @@
             justify-content: space-between;
             height: 64px;
         }
-        
+
         .nav-logo {
             display: flex;
             align-items: center;
@@ -63,11 +70,24 @@
             text-decoration: none;
             color: var(--text);
         }
-        
-        .nav-logo img { width: 36px; height: 36px; border-radius: 8px; }
-        .nav-logo span { font-weight: 700; font-size: 1.1rem; }
-        
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+        .nav-logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        .nav-logo span {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -75,8 +95,11 @@
             font-weight: 500;
             transition: color 0.2s;
         }
-        .nav-links a:hover { color: var(--purple); }
-        
+
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+
         .nav-cta {
             background: var(--purple);
             color: white;
@@ -87,28 +110,39 @@
             font-size: 0.85rem;
             transition: all 0.2s;
         }
-        .nav-cta:hover { background: #5b21b6; transform: translateY(-1px); }
-        
+
+        .nav-cta:hover {
+            background: #5b21b6;
+            transform: translateY(-1px);
+        }
+
         /* ── Hero ── */
         .hero {
             padding: 10rem 2rem 6rem;
             text-align: center;
             position: relative;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(109,40,217,0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(8,145,178,0.05) 0%, transparent 50%),
-                radial-gradient(circle at 50% 0%, rgba(37,99,235,0.04) 0%, transparent 50%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(109, 40, 217, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(8, 145, 178, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.04) 0%, transparent 50%);
             pointer-events: none;
         }
-        
-        .hero-content { position: relative; max-width: 800px; margin: 0 auto; }
-        
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -120,9 +154,9 @@
             font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(109,40,217,0.15);
+            border: 1px solid rgba(109, 40, 217, 0.15);
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -130,7 +164,7 @@
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
-        
+
         .gradient-text {
             background: linear-gradient(135deg, var(--purple), var(--blue), var(--teal));
             -webkit-background-clip: text;
@@ -138,22 +172,35 @@
             background-size: 200% 200%;
             animation: gradientShift 5s ease infinite;
         }
-        
+
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto 2.5rem;
         }
-        
-        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -167,21 +214,30 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, var(--purple), var(--blue));
             color: white;
-            box-shadow: 0 4px 16px rgba(109,40,217,0.2);
+            box-shadow: 0 4px 16px rgba(109, 40, 217, 0.2);
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(109,40,217,0.3); }
-        
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(109, 40, 217, 0.3);
+        }
+
         .btn-secondary {
             background: var(--surface);
             color: var(--text);
             border: 1px solid var(--border);
         }
-        .btn-secondary:hover { border-color: var(--purple); color: var(--purple); transform: translateY(-2px); }
-        
+
+        .btn-secondary:hover {
+            border-color: var(--purple);
+            color: var(--purple);
+            transform: translateY(-2px);
+        }
+
         /* ── Stats ── */
         .stats {
             display: flex;
@@ -190,60 +246,68 @@
             margin-top: 4rem;
             flex-wrap: wrap;
         }
-        
+
         .stat {
             text-align: center;
         }
-        
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
             line-height: 1;
         }
-        
-        .stat-number.purple { color: var(--purple); }
-        .stat-number.blue { color: var(--blue); }
-        .stat-number.teal { color: var(--teal); }
-        
+
+        .stat-number.purple {
+            color: var(--purple);
+        }
+
+        .stat-number.blue {
+            color: var(--blue);
+        }
+
+        .stat-number.teal {
+            color: var(--teal);
+        }
+
         .stat-label {
             font-size: 0.85rem;
             color: var(--text-secondary);
             font-weight: 500;
             margin-top: 0.25rem;
         }
-        
+
         /* ── Sections ── */
         section {
             padding: 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .section-header h2 {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
         }
-        
+
         .section-header p {
             color: var(--text-secondary);
             font-size: 1.05rem;
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* ── Projects ── */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .project-card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -256,30 +320,48 @@
             color: inherit;
             display: block;
         }
-        
+
         .project-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 4px;
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
+
         .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(109,40,217,0.1);
+            box-shadow: 0 12px 40px rgba(109, 40, 217, 0.1);
             border-color: transparent;
         }
-        
-        .project-card:hover::before { opacity: 1; }
-        
-        .project-card.purple::before { background: linear-gradient(90deg, var(--purple), var(--blue)); }
-        .project-card.blue::before { background: linear-gradient(90deg, var(--blue), var(--teal)); }
-        .project-card.teal::before { background: linear-gradient(90deg, var(--teal), var(--green)); }
-        .project-card.amber::before { background: linear-gradient(90deg, var(--amber), #ef4444); }
-        .project-card.green::before { background: linear-gradient(90deg, var(--green), #0891b2); }
-        
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card.purple::before {
+            background: linear-gradient(90deg, var(--purple), var(--blue));
+        }
+
+        .project-card.blue::before {
+            background: linear-gradient(90deg, var(--blue), var(--teal));
+        }
+
+        .project-card.teal::before {
+            background: linear-gradient(90deg, var(--teal), var(--green));
+        }
+
+        .project-card.amber::before {
+            background: linear-gradient(90deg, var(--amber), #ef4444);
+        }
+
+        .project-card.green::before {
+            background: linear-gradient(90deg, var(--green), #0891b2);
+        }
+
         .project-tag {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -290,16 +372,43 @@
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
-        
-        .tag-flagship { background: var(--purple-light); color: var(--purple); }
-        .tag-popular { background: var(--blue-light); color: var(--blue); }
-        .tag-new { background: var(--teal-light); color: var(--teal); }
-        .tag-community { background: #fef3c7; color: var(--amber); }
-        .tag-challenge { background: #ecfdf5; color: var(--green); }
-        
-        .project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .project-card p { color: var(--text-secondary); font-size: 0.95rem; }
-        
+
+        .tag-flagship {
+            background: var(--purple-light);
+            color: var(--purple);
+        }
+
+        .tag-popular {
+            background: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .tag-new {
+            background: var(--teal-light);
+            color: var(--teal);
+        }
+
+        .tag-community {
+            background: #fef3c7;
+            color: var(--amber);
+        }
+
+        .tag-challenge {
+            background: #ecfdf5;
+            color: var(--green);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
         .project-meta {
             display: flex;
             gap: 1rem;
@@ -307,14 +416,14 @@
             font-size: 0.8rem;
             color: var(--text-muted);
         }
-        
+
         /* ── How to Join ── */
         .steps {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .step {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -323,12 +432,12 @@
             text-align: center;
             transition: all 0.3s;
         }
-        
+
         .step:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(109,40,217,0.08);
+            box-shadow: 0 8px 24px rgba(109, 40, 217, 0.08);
         }
-        
+
         .step-number {
             width: 48px;
             height: 48px;
@@ -340,15 +449,38 @@
             font-weight: 700;
             margin-bottom: 1rem;
         }
-        
-        .step:nth-child(1) .step-number { background: var(--purple-light); color: var(--purple); }
-        .step:nth-child(2) .step-number { background: var(--blue-light); color: var(--blue); }
-        .step:nth-child(3) .step-number { background: var(--teal-light); color: var(--teal); }
-        .step:nth-child(4) .step-number { background: #ecfdf5; color: var(--green); }
-        
-        .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .step p { font-size: 0.9rem; color: var(--text-secondary); }
-        
+
+        .step:nth-child(1) .step-number {
+            background: var(--purple-light);
+            color: var(--purple);
+        }
+
+        .step:nth-child(2) .step-number {
+            background: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .step:nth-child(3) .step-number {
+            background: var(--teal-light);
+            color: var(--teal);
+        }
+
+        .step:nth-child(4) .step-number {
+            background: #ecfdf5;
+            color: var(--green);
+        }
+
+        .step h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
         /* ── Footer ── */
         footer {
             text-align: center;
@@ -357,7 +489,7 @@
             color: var(--text-secondary);
             font-size: 0.85rem;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
@@ -365,24 +497,39 @@
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         .footer-links a {
             color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s;
         }
-        .footer-links a:hover { color: var(--purple); }
-        
+
+        .footer-links a:hover {
+            color: var(--purple);
+        }
+
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .stats { gap: 1.5rem; }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="nav-inner">
@@ -396,7 +543,8 @@
                 <li><a href="https://github.com/Jaidevstudio" target="_blank">GitHub</a></li>
                 <li><a href="https://discord.gg/wXFWgsAuzR" target="_blank">Discord</a></li>
             </ul>
-            <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml" class="nav-cta" target="_blank">Join the Org</a>
+            <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml" class="nav-cta"
+                target="_blank">Join the Org</a>
         </div>
     </nav>
 
@@ -404,10 +552,12 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">Open Source Community</div>
-            <h1>Build the Future<br/><span class="gradient-text">In Every Language</span></h1>
-            <p>An open-source community of developers building tools for everyone. From programming in Hindi to developer utilities -- everyone can contribute.</p>
+            <h1>Build the Future<br /><span class="gradient-text">In Every Language</span></h1>
+            <p>An open-source community of developers building tools for everyone. From programming in Hindi to
+                developer utilities -- everyone can contribute.</p>
             <div class="hero-buttons">
-                <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml" class="btn btn-primary" target="_blank">Join Jaidevstudio</a>
+                <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml"
+                    class="btn btn-primary" target="_blank">Join Jaidevstudio</a>
                 <a href="#projects" class="btn btn-secondary">Explore Projects</a>
             </div>
             <div class="stats" id="stats">
@@ -437,7 +587,8 @@
             <a href="https://github.com/Jaidevstudio/MotherTongue" class="project-card purple" target="_blank">
                 <span class="project-tag tag-flagship">Flagship</span>
                 <h3>MotherTongue</h3>
-                <p>An interpreter that lets you write and run code in your mother language. Currently supports Hindi -- add yours.</p>
+                <p>An interpreter that lets you write and run code in your mother language. Currently supports Hindi --
+                    add yours.</p>
                 <div class="project-meta">
                     <span>Python</span>
                     <span>17 languages awaiting contributors</span>
@@ -446,7 +597,8 @@
             <a href="https://github.com/Jaidevstudio/DevToolkit" class="project-card teal" target="_blank">
                 <span class="project-tag tag-new">New</span>
                 <h3>DevToolkit</h3>
-                <p>Collection of free developer utilities. Each tool is a self-contained project -- build one in a single PR.</p>
+                <p>Collection of free developer utilities. Each tool is a self-contained project -- build one in a
+                    single PR.</p>
                 <div class="project-meta">
                     <span>HTML/CSS/JS</span>
                     <span>9 tools need contributors</span>
@@ -473,7 +625,8 @@
             <a href="https://github.com/Jaidevstudio/OpenSource-Challenges" class="project-card green" target="_blank">
                 <span class="project-tag tag-challenge">Weekly</span>
                 <h3>OpenSource Challenges</h3>
-                <p>Weekly coding challenges for all skill levels. Solve, submit, get reviewed, and learn from others.</p>
+                <p>Weekly coding challenges for all skill levels. Solve, submit, get reviewed, and learn from others.
+                </p>
                 <div class="project-meta">
                     <span>Any Language</span>
                     <span>New challenges every Monday</span>
@@ -520,7 +673,8 @@
             </div>
         </div>
         <div style="text-align:center;margin-top:2.5rem;">
-            <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml" class="btn btn-primary" target="_blank">Apply Now</a>
+            <a href="https://github.com/Jaidevstudio/support/issues/new?template=invitation.yml" class="btn btn-primary"
+                target="_blank">Apply Now</a>
         </div>
     </section>
 
@@ -559,4 +713,5 @@
         });
     </script>
 </body>
+
 </html>
